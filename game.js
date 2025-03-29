@@ -405,13 +405,20 @@ class ReflexoTiles {
 
     startTimer() {
         if (this.gameTimer) clearInterval(this.gameTimer);
-        
         this.gameStartTime = Date.now();
         this.gameTimer = setInterval(() => {
-            const timeElement = document.getElementById('time');
-            const seconds = Math.floor((Date.now() - this.gameStartTime) / 1000);
-            timeElement.textContent = `${Math.floor(seconds / 60)}:${(seconds % 60).toString().padStart(2, '0')}`;
+            const elapsed = Math.floor((Date.now() - this.gameStartTime) / 1000);
+            const minutes = Math.floor(elapsed / 60).toString().padStart(2, '0');
+            const seconds = (elapsed % 60).toString().padStart(2, '0');
+            document.getElementById('time').textContent = `${minutes}:${seconds}`;
         }, 1000);
+    }
+
+    stopTimer() {
+        if (this.gameTimer) {
+            clearInterval(this.gameTimer);
+            this.gameTimer = null;
+        }
     }
 
     saveGameProgress() {

@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #f0f2f5;
+    --text-color: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.logo-container {
+    margin-bottom: 3rem;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    animation: slideIn 1s ease-out;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.menu-button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.menu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-button i {
+    font-size: 1.4rem;
+}
+
+.play-btn {
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 2rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .welcome-container {
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .menu-button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+} 
