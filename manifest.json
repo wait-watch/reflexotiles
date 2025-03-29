@@ -1,0 +1,21 @@
+{
+    "name": "ReflexoTiles",
+    "short_name": "ReflexoTiles",
+    "description": "A challenging puzzle game where you match tile patterns through strategic moves!",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f0f2f5",
+    "theme_color": "#3498db",
+    "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+} 

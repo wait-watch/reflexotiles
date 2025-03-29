@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192" height="192" version="1.1" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+ <rect width="192" height="192" fill="#3498db"/>
+ <g transform="matrix(4,0,0,4,16,16)">
+  <rect x="4" y="4" width="8" height="8" fill="#e74c3c"/>
+  <rect x="28" y="4" width="8" height="8" fill="#2ecc71"/>
+  <rect x="4" y="28" width="8" height="8" fill="#f1c40f"/>
+  <rect x="28" y="28" width="8" height="8" fill="#9b59b6"/>
+ </g>
+</svg> 
